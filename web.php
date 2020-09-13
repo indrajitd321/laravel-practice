@@ -19,4 +19,7 @@ Route::get('/about',function(){
 });
 Route::get('/contact',function(){
     echo "This is contact section";
+})->middleware('age');
+Route::get('home',function(){
+    echo "This is home page";
 });
