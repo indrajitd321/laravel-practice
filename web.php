@@ -14,9 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/about',function(){
-    return view('about',['channel'=>'Indrajit Dey']);
-});
-Route::get('/contact',function(){
-    echo "This is contact section";
-});
+Route::get('/about','HelloController@hello');
+Route::get(md5('/blogs'),'HelloController@blog')->name('blog');
+
